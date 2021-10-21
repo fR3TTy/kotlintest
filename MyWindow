@@ -1,0 +1,20 @@
+import javax.swing.JButton
+import javax.swing.JFrame
+import javax.swing.JPanel
+
+class MyWindow : JFrame() {
+    init {
+        title = "DAS IST MEIN FENSTER"
+        defaultCloseOperation = EXIT_ON_CLOSE
+        setSize(400, 400)
+        val p = JPanel()
+        add(p)
+        val b1 = JButton("Send")
+        val b2 = JButton("Close")
+        p.add(b1)
+        p.add(b2)
+        val c = MyController()
+        b1.addActionListener(c)
+        b2.addActionListener(c)
+    }
+}
